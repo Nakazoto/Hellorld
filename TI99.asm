@@ -22,13 +22,15 @@
 ; There are 16 workspace registers R0 through R15
 ; CLR R0 loads 0000 into R0
 ; LI is a Load Immediate, hexadecimal values have a '>'
-; I do not understand BLWP, but it works and it's what the book told me to use
+; Branch and Load Workspace Pointer -> Essentially links to subroutines,
+; program modules, or other programs not in the calling workspace
 ; INC is an increment (start at 0, increment one by one until we break 767)
 ; CI is a compare, comparing R0 with 768
 ; JLT is a Jump if Less Than I think?
 ; If R0 is less than 768 then Jump to LP which is 5 bytes back (FF-FA=5)
+; LI R0,298 load immediate with value 298 (middle of screen)
 ; LI R1,TX the TX is the memory address where the text is stored
 ; LI R2,9 tells it to read 9 bytes from that previous memory address
-; I do not understand BLWP, but it works and it's what the book told me to use
+; Branch and Load Workspace Pointer 
 ; JMP$ sets up an infinite loop, it jumps to itself
 ; Finally, the ASCII text for HELLORLD!
