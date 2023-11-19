@@ -19,7 +19,7 @@ data_read         .EQU 9003H
 		 jmp main
 
 mytext01        .byte "MOS 6502 Kit", 0
-mytext02        .byte "Hellord!", 0
+mytext02        .byte "Hellorld!", 0
 
 ; wait until LCD ready bit set
 
